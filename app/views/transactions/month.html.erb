@@ -1,0 +1,20 @@
+<h1>Listing Transactions</h1>
+<% (1..12).each do |i| %>
+  <%=  link_to monthLookup(i),month_transaction_url(i) %>
+<% end %>
+ 
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Amount</th>
+    <th>Vendor</th>
+  </tr>
+ 
+  <% @transactions.each do |transaction| %>
+    <tr>
+      <td><%= transaction.createdate%></td>
+      <td><%= transaction.amount %></td>
+      <td><%= transaction.vendor %></td>
+    </tr>
+  <% end %>
+</table>

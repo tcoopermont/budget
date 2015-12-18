@@ -1,0 +1,20 @@
+<h1>New Transaction</h1>
+<%= form_for :transaction, url: transactions_path do |f| %>
+  <p>
+    <%= f.label :amount %><br>
+    <%= f.text_field :amount%>
+  </p>
+ 
+  <p>
+    <%= f.label :vendor%><br>
+    <%= f.text_field :vendor%>
+  </p>
+  <p>
+    <%= f.label :createdate %><br>
+    <%= f.text_field :createdate %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
